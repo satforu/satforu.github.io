@@ -289,4 +289,53 @@ const revealStyles = `
 document.head.insertAdjacentHTML('beforeend', revealStyles);
 
 // Initialize reveal animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', addScrollRevealAnimations);
+document.addEventListener('DOMContentLoaded', () => {
+    addScrollRevealAnimations();
+    
+    // Resources page specific animations
+    initResourcesAnimations();
+});
+
+// Resources page animations
+function initResourcesAnimations() {
+    // Add reveal classes to elements
+    const revealElements = document.querySelectorAll('.resource-card, .tip-card, .video-card, .cta-card');
+    revealElements.forEach((el, index) => {
+        el.classList.add('reveal-up');
+        if (el.classList.contains('tip-card')) {
+            el.classList.add('stagger-delay');
+        }
+    });
+    
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all reveal elements
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+    
+    // Add hover effects for resource cards
+    const resourceCards = document.querySelectorAll('.resource-card.main-card');
+    resourceCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
