@@ -119,17 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Animate statistics counters
 function animateStats() {
-    const stats = [
-        { element: document.querySelector('.score-stats .stat:nth-child(1) .stat-number'), target: 200, suffix: '+' },
-        { element: document.querySelector('.score-stats .stat:nth-child(2) .stat-number'), target: 1000, suffix: '+' },
-        { element: document.querySelector('.score-stats .stat:nth-child(3) .stat-number'), target: 100, suffix: '%' }
-    ];
-    
-    stats.forEach(stat => {
-        if (stat.element) {
-            animateCounter(stat.element, stat.target, stat.suffix);
-        }
-    });
+    // Stats animation removed - no fake numbers
 }
 
 function animateCounter(element, target, suffix = '') {
@@ -154,13 +144,12 @@ async function loadLatestYouTubeContent() {
         const mainYouTubeEmbed = document.getElementById('main-youtube-embed');
         
         if (streamPreview) {
-            // Simulate loading latest stream info
+            // Show simple placeholder directing to YouTube
             setTimeout(() => {
                 streamPreview.innerHTML = `
                     <div style="background: #f3f4f6; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <div style="background: #ef4444; color: white; display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.5rem;">● LIVE</div>
-                        <div style="font-weight: 600; margin-bottom: 0.5rem;">SAT Math Strategy Session</div>
-                        <div style="color: #6b7280; font-size: 0.9rem;">Join us now for advanced algebra tips!</div>
+                        <div style="font-weight: 600; margin-bottom: 0.5rem;">Visit YouTube for Latest Content</div>
+                        <div style="color: #6b7280; font-size: 0.9rem;">Check @sat4u.official for live streams and videos!</div>
                     </div>
                 `;
             }, 1000);
@@ -173,8 +162,8 @@ async function loadLatestYouTubeContent() {
                     <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; background: #000; border-radius: 8px; overflow: hidden;">
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
                             <div style="font-size: 3rem; margin-bottom: 1rem;">▶️</div>
-                            <div style="font-size: 1.1rem; font-weight: 600;">Latest SAT Prep Stream</div>
-                            <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">Click to watch on YouTube</div>
+                            <div style="font-size: 1.1rem; font-weight: 600;">Visit our YouTube Channel</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">@sat4u.official for SAT prep content</div>
                         </div>
                     </div>
                 `;
