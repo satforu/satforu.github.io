@@ -1585,3 +1585,82 @@ Perfect! I've significantly reduced the size of the resource cards to make them 
 - **Reduced card padding**: 2rem → 1.25rem → 1rem on smaller screens
 
 The resource cards now have a much more compact, clean appearance that doesn't dominate the screen while maintaining excellent readability and Apple-like aesthetics!
+
+tarushvkodes: THE IMAGES ARE STILL TOO LARGE THEYRE BIGGER THAN THE TEXT!! MAKE THEM WAY SMALLER
+
+GitHub Copilot: I see the issue! The resource icons are still too large compared to the text. Let me make them much smaller to be proportional to the content. 
+```
+
+
+Made changes.
+
+
+```
+
+```
+
+
+Made changes.
+
+
+```
+
+```
+
+
+Made changes.
+
+
+```
+
+```
+
+
+Made changes.
+
+
+```
+
+```
+
+
+Made changes.
+
+
+```
+
+```
+
+
+Made changes.
+
+
+```
+Perfect! I've significantly reduced all the icon sizes to make them much smaller and more proportional to the text:
+
+## ✅ **Major Icon Size Reductions:**
+
+### **Resource Card Icons:**
+- **Main resource icons**: 40px → 28px (30% smaller)
+- **Resource icon SVGs**: 20px → 14px (30% smaller)
+- **Border radius**: 10px → 6px for better proportion
+
+### **Study Tips Icons:**
+- **Tip icons**: 48px → 36px (25% smaller)
+- **Tip icon SVGs**: 24px → 18px (25% smaller)
+- **Border radius**: 12px → 8px
+- **Bottom margin**: 1.5rem → 1rem (tighter spacing)
+
+### **Video Section Icon:**
+- **Video icon**: 56px → 44px (21% smaller)
+- **Video icon SVG**: 28px → 22px (21% smaller)
+- **Border radius**: 14px → 10px
+
+### **Feature Item Icons:**
+- **Feature emoji icons**: 0.875rem → 0.75rem (smaller emojis)
+
+### **Layout Adjustments:**
+- **Card header alignment**: Changed from `flex-start` to `center` for better icon-text alignment
+- **Icon gap**: Reduced spacing for tighter, cleaner layout
+
+The icons are now much more appropriately sized relative to the text content, creating a cleaner, more balanced Apple-like design where the content is the focus, not the icons!
