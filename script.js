@@ -46,8 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Typing animation for hero text
     const typingText = document.querySelector('.typing-text');
-    if (typingText) {
-        const phrases = ['Made Simple', 'Made Easy', 'Made Intuitive', 'Made Guided', 'Made Accessible', 'Made Smart', 'That Works', 'That Helps', 'For Everyone', 'Made Free', 'Made Effective', 'Made Clear'];
+    const changingText = document.getElementById('changing-text');
+    const targetElement = typingText || changingText;
+    
+    if (targetElement) {
+        const phrases = [
+            'Made Simple', 'Made Easy', 'For Everyone', 'That Works', 
+            'That Helps', 'Made Free', 'Made Effective', 'Made Clear',
+            'Made Accessible', 'Made Smart', 'That Succeeds', 'Made Better',
+            'For Students', 'Made Right', 'That Delivers', 'Made Powerful',
+            'For Success', 'Made Perfect', 'Made Intuitive', 'Made Guided'
+        ];
         let currentPhrase = 0;
         let currentChar = 0;
         let isDeleting = false;
@@ -56,10 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const current = phrases[currentPhrase];
             
             if (isDeleting) {
-                typingText.textContent = current.substring(0, currentChar - 1);
+                targetElement.textContent = current.substring(0, currentChar - 1);
                 currentChar--;
             } else {
-                typingText.textContent = current.substring(0, currentChar + 1);
+                targetElement.textContent = current.substring(0, currentChar + 1);
                 currentChar++;
             }
             

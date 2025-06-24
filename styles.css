@@ -367,12 +367,33 @@ body {
     margin: 0.5rem auto;
 }
 
-/* Sections */
-.section-title {
+/* Page Header Styles */
+.page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #F5F7FA 0%, #C3CFE2 100%);
+}
+
+.page-title {
     font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: var(--text-primary);
 }
 
@@ -460,20 +481,20 @@ body {
 }
 
 .cta {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--gradient);
     color: white;
     text-align: center;
 }
 
 .cta-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .cta-content p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
@@ -712,29 +733,30 @@ body {
 
 /* Resources Page Styles */
 .official-resources {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .resources-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1000px;
+    gap: 1.5rem;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .resource-card {
     background: white;
-    border-radius: 20px;
-    padding: 3rem 2rem;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
     text-align: center;
     border: 1px solid var(--border);
     transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .resource-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .resource-icon {
@@ -768,21 +790,29 @@ body {
 }
 
 .study-tips {
-    padding: 6rem 0;
+    padding: 2rem 0;
     background: var(--surface);
 }
 
 .tips-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .tip-card {
     background: white;
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 12px;
+    padding: 1.5rem;
     border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.tip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .tip-card h3 {
@@ -796,12 +826,13 @@ body {
 }
 
 .youtube-resources {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .youtube-resources .youtube-card {
     max-width: 500px;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
 }
 
 /* FAQ Styles */
@@ -1848,9 +1879,41 @@ body {
     
     .resources-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
-    .resource-actions {
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .resource-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .tip-card {
+        padding: 1.25rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .score-stats {
         flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .floating-card {
+        max-width: 300px;
+        padding: 1.5rem;
+    }
+    
+    .youtube-card {
+        padding: 2rem 1rem;
     }
 }
