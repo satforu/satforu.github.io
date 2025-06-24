@@ -1214,9 +1214,9 @@ body {
 }
 
 .resource-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1234,8 +1234,8 @@ body {
 }
 
 .resource-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .card-title-group {
@@ -1293,7 +1293,7 @@ body {
 }
 
 .feature-icon {
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .resource-btn {
@@ -1370,9 +1370,9 @@ body {
 }
 
 .tip-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     background: linear-gradient(135deg, #f2f2f7 0%, #e5e5ea 100%);
     display: flex;
     align-items: center;
@@ -1382,8 +1382,8 @@ body {
 }
 
 .tip-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 }
 
 .tip-card h3 {
@@ -1425,9 +1425,9 @@ body {
 }
 
 .video-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
@@ -1436,8 +1436,8 @@ body {
 }
 
 .video-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     color: white;
 }
 
