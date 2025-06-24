@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing animation for hero text
     const typingText = document.querySelector('.typing-text');
     if (typingText) {
-        const phrases = ['Made Simple', 'That Works', 'For Everyone', 'Made Simple'];
+        const phrases = ['Made Simple', 'Made Easy', 'Made Intuitive', 'Made Guided', 'Made Accessible', 'Made Smart'];
         let currentPhrase = 0;
         let currentChar = 0;
         let isDeleting = false;
