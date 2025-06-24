@@ -124,6 +124,39 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'all 0.6s ease';
         observeCards.observe(card);
     });
+    
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const toggle = item.querySelector('.faq-toggle');
+        
+        if (question && answer && toggle) {
+            question.addEventListener('click', () => {
+                const isOpen = answer.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherToggle = otherItem.querySelector('.faq-toggle');
+                    if (otherAnswer && otherToggle) {
+                        otherAnswer.classList.remove('active');
+                        otherToggle.textContent = '+';
+                    }
+                });
+                
+                // Toggle current item
+                if (!isOpen) {
+                    answer.classList.add('active');
+                    toggle.textContent = '−';
+                } else {
+                    answer.classList.remove('active');
+                    toggle.textContent = '+';
+                }
+            });
+        }
+    });
 });
 
 // Animate statistics counters
